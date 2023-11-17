@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace LivreDeRecette
 {
-    public partial class Interface : Form
+    public partial class QuestionModifyOrWatch : Form
     {
-        public Interface()
+        public QuestionModifyOrWatch()
         {
             InitializeComponent();
         }
 
-        private void Interface_Load(object sender, EventArgs e)
+        private void QuestionModifyOrWatch_Load(object sender, EventArgs e)
         {
 
         }
