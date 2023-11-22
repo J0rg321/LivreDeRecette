@@ -15,6 +15,7 @@ namespace LivreDeRecette
         public QuestionModifyOrWatch()
         {
             InitializeComponent();
+
         }
 
         private void QuestionModifyOrWatch_Load(object sender, EventArgs e)
@@ -28,6 +29,17 @@ namespace LivreDeRecette
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            VegegetarianOrNot vegetarianOrNot = new VegegetarianOrNot();
+            vegetarianOrNot.ShowDialog();
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void boutonCreer_Click(object sender, EventArgs e)
         {
 
         }
