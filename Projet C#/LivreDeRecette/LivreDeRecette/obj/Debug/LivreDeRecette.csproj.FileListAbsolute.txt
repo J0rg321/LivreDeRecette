@@ -18,3 +18,4 @@ C:\GitHub\LivreDeRecette\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\Livre
 C:\GitHub\LivreDeRecette\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.csproj.CoreCompileInputs.cache
 C:\GitHub\LivreDeRecette\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.exe
 C:\GitHub\LivreDeRecette\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.pdb
+C:\GitHub\LivreDeRecette\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.csproj.SuggestedBindingRedirects.cache
