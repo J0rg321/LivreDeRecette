@@ -52,7 +52,6 @@
     <Compile Include="QuestionModifyOrWatch.Designer.cs">
       <DependentUpon>QuestionModifyOrWatch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Recipe.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VegegetarianOrNot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VegegetarianOrNot.Designer.cs">
+      <DependentUpon>VegegetarianOrNot.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +81,9 @@
     </Compile>
     <EmbeddedResource Include="QuestionModifyOrWatch.resx">
       <DependentUpon>QuestionModifyOrWatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VegegetarianOrNot.resx">
+      <DependentUpon>VegegetarianOrNot.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

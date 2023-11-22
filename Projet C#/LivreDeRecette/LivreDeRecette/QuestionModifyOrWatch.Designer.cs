@@ -32,14 +32,15 @@
             this.boutonChercher = new System.Windows.Forms.Button();
             this.boutonCreer = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // boutonChercher
             // 
-            this.boutonChercher.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boutonChercher.Location = new System.Drawing.Point(172, 170);
+            this.boutonChercher.Font = new System.Drawing.Font("Monotype Corsiva", 26.75F, System.Drawing.FontStyle.Italic);
+            this.boutonChercher.Location = new System.Drawing.Point(801, 416);
             this.boutonChercher.Name = "boutonChercher";
-            this.boutonChercher.Size = new System.Drawing.Size(291, 43);
+            this.boutonChercher.Size = new System.Drawing.Size(343, 57);
             this.boutonChercher.TabIndex = 0;
             this.boutonChercher.Text = "Chercher une recette";
             this.boutonChercher.UseVisualStyleBackColor = true;
@@ -47,24 +48,37 @@
             // 
             // boutonCreer
             // 
-            this.boutonCreer.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boutonCreer.Location = new System.Drawing.Point(208, 251);
+            this.boutonCreer.Font = new System.Drawing.Font("Monotype Corsiva", 26.75F, System.Drawing.FontStyle.Italic);
+            this.boutonCreer.Location = new System.Drawing.Point(837, 497);
             this.boutonCreer.Name = "boutonCreer";
-            this.boutonCreer.Size = new System.Drawing.Size(217, 45);
+            this.boutonCreer.Size = new System.Drawing.Size(269, 59);
             this.boutonCreer.TabIndex = 1;
             this.boutonCreer.Text = "Créer une recette";
             this.boutonCreer.UseVisualStyleBackColor = true;
+            this.boutonCreer.Click += new System.EventHandler(this.boutonCreer_Click);
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(55, 69);
+            this.textBox1.Font = new System.Drawing.Font("Monotype Corsiva", 36.75F, System.Drawing.FontStyle.Italic);
+            this.textBox1.Location = new System.Drawing.Point(622, 320);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(526, 49);
+            this.textBox1.Size = new System.Drawing.Size(689, 62);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Que souhaitez-vous faire aujourd\'hui ?";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.Khaki;
+            this.exitBtn.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.Location = new System.Drawing.Point(1687, 936);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(201, 75);
+            this.exitBtn.TabIndex = 5;
+            this.exitBtn.Text = "Quitter";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // QuestionModifyOrWatch
             // 
@@ -72,7 +86,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(630, 388);
+            this.ClientSize = new System.Drawing.Size(1914, 1041);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.boutonCreer);
             this.Controls.Add(this.boutonChercher);
@@ -89,5 +104,6 @@
         private System.Windows.Forms.Button boutonChercher;
         private System.Windows.Forms.Button boutonCreer;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button exitBtn;
     }
 }
