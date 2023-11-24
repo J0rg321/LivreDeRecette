@@ -29,6 +29,8 @@ namespace LivreDeRecette
 
         private void boutonChercher_Click(object sender, EventArgs e)
         {
+            List<Ingredient> ingredients = Ingredient.GetAll();
+
 
         }
 
