@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LivreDeRecette
 {
-    public partial class Menu : Form
+    public partial class frmMenu : Form
     {
-        public Menu()
+        public frmMenu()
         {
             InitializeComponent();
         }
@@ -29,8 +29,8 @@ namespace LivreDeRecette
 
         private void button1_Click(object sender, EventArgs e)
         {
-            QuestionModifyOrWatch questionModifyOrWatch = new QuestionModifyOrWatch();
-            questionModifyOrWatch.ShowDialog();
+            frmQuestions questions = new frmQuestions();
+            questions.ShowDialog();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,6 +41,11 @@ namespace LivreDeRecette
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

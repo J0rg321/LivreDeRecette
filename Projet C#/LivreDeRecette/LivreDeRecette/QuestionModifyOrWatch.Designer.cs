@@ -1,6 +1,6 @@
 ﻿namespace LivreDeRecette
 {
-    partial class QuestionModifyOrWatch
+    partial class frmQuestions
     {
         /// <summary>
         /// Required designer variable.
@@ -28,71 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionModifyOrWatch));
-            this.boutonChercher = new System.Windows.Forms.Button();
-            this.boutonCreer = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.exitBtn = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblWish = new System.Windows.Forms.Label();
+            this.lblToday = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // boutonChercher
+            // btnSearch
             // 
-            this.boutonChercher.Font = new System.Drawing.Font("Monotype Corsiva", 26.75F, System.Drawing.FontStyle.Italic);
-            this.boutonChercher.Location = new System.Drawing.Point(801, 416);
-            this.boutonChercher.Name = "boutonChercher";
-            this.boutonChercher.Size = new System.Drawing.Size(343, 57);
-            this.boutonChercher.TabIndex = 0;
-            this.boutonChercher.Text = "Chercher une recette";
-            this.boutonChercher.UseVisualStyleBackColor = true;
-            this.boutonChercher.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearch.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnSearch.Font = new System.Drawing.Font("Bahnschrift Condensed", 45F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(775, 524);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(461, 91);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Chercher une recette";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.button1_Click);
             // 
-            // boutonCreer
+            // btnCreate
             // 
-            this.boutonCreer.Font = new System.Drawing.Font("Monotype Corsiva", 26.75F, System.Drawing.FontStyle.Italic);
-            this.boutonCreer.Location = new System.Drawing.Point(837, 497);
-            this.boutonCreer.Name = "boutonCreer";
-            this.boutonCreer.Size = new System.Drawing.Size(269, 59);
-            this.boutonCreer.TabIndex = 1;
-            this.boutonCreer.Text = "Créer une recette";
-            this.boutonCreer.UseVisualStyleBackColor = true;
-            this.boutonCreer.Click += new System.EventHandler(this.boutonCreer_Click);
+            this.btnCreate.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnCreate.Font = new System.Drawing.Font("Bahnschrift Condensed", 45F);
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Location = new System.Drawing.Point(775, 647);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(461, 91);
+            this.btnCreate.TabIndex = 1;
+            this.btnCreate.Text = "Créer une recette";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.boutonCreer_Click);
             // 
-            // textBox1
+            // btnExit
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Font = new System.Drawing.Font("Monotype Corsiva", 36.75F, System.Drawing.FontStyle.Italic);
-            this.textBox1.Location = new System.Drawing.Point(622, 320);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(689, 62);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Que souhaitez-vous faire aujourd\'hui ?";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btnExit.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(949, 762);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(113, 54);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Quitter";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // exitBtn
+            // lblWish
             // 
-            this.exitBtn.BackColor = System.Drawing.Color.Khaki;
-            this.exitBtn.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.Location = new System.Drawing.Point(1687, 936);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(201, 75);
-            this.exitBtn.TabIndex = 5;
-            this.exitBtn.Text = "Quitter";
-            this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.lblWish.AutoSize = true;
+            this.lblWish.Font = new System.Drawing.Font("Bahnschrift Condensed", 80F);
+            this.lblWish.ForeColor = System.Drawing.Color.White;
+            this.lblWish.Location = new System.Drawing.Point(512, 224);
+            this.lblWish.Name = "lblWish";
+            this.lblWish.Size = new System.Drawing.Size(938, 128);
+            this.lblWish.TabIndex = 9;
+            this.lblWish.Text = "Que souhaitez-vous faire";
             // 
-            // QuestionModifyOrWatch
+            // lblToday
+            // 
+            this.lblToday.AutoSize = true;
+            this.lblToday.Font = new System.Drawing.Font("Bahnschrift Condensed", 80F);
+            this.lblToday.ForeColor = System.Drawing.Color.White;
+            this.lblToday.Location = new System.Drawing.Point(737, 352);
+            this.lblToday.Name = "lblToday";
+            this.lblToday.Size = new System.Drawing.Size(508, 128);
+            this.lblToday.TabIndex = 10;
+            this.lblToday.Text = "aujourd\'hui ?";
+            // 
+            // frmQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(1914, 1041);
-            this.Controls.Add(this.exitBtn);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.boutonCreer);
-            this.Controls.Add(this.boutonChercher);
-            this.Name = "QuestionModifyOrWatch";
-            this.Text = "QuestionModifyOrWatch";
+            this.Controls.Add(this.lblToday);
+            this.Controls.Add(this.lblWish);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.btnSearch);
+            this.Name = "frmQuestions";
+            this.Text = "Questions";
             this.Load += new System.EventHandler(this.QuestionModifyOrWatch_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -101,9 +117,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button boutonChercher;
-        private System.Windows.Forms.Button boutonCreer;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblWish;
+        private System.Windows.Forms.Label lblToday;
     }
 }

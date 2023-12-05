@@ -7,7 +7,7 @@
 */
 
 
--- Création de la base de donnée "cooking" 
+-- Création de la base de donnéecooking "cooking" 
 
 CREATE DATABASE IF NOT EXISTS cooking;
 
@@ -15,51 +15,50 @@ USE cooking;
 
 -- Création de la table de données "recipe"
 
-CREATE TABLE IF NOT EXISTS recipe
+CREATE TABLE IF NOT EXISTS recipes
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	name_of_recipe VARCHAR(150) NOT NULL,
+	recipeName VARCHAR(150) NOT NULL,
 	vegetarian BOOLEAN NOT NULL,
-	time_of_preparation VARCHAR(100),
-	type_of_recipe VARCHAR(100),
+	preparationTime VARCHAR(100),
+	recipeType VARCHAR(100),
 	lvl VARCHAR(100)
 );
 
 -- Création de la table de données "step"
 
-CREATE TABLE IF NOT EXISTS step
+CREATE TABLE IF NOT EXISTS steps
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	name_step VARCHAR(150) NOT NULL,
-	nb_step INT NOT NULL,
+	stepName VARCHAR(150) NOT NULL,
+	stepNumber INT NOT NULL,
 	content VARCHAR(1000) NOT NULL,
-	recipe_id INT NOT NULL
+	recipeID INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS ingredient
+CREATE TABLE IF NOT EXISTS ingredients
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	name_of_ingredient VARCHAR(100) NOT NULL,
+	ingredientName VARCHAR(100) NOT NULL,
 	measurement VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS quantity
+CREATE TABLE IF NOT EXISTS quantities
 (
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	id_of_ingredient INT NOT NULL,
-	id_of_recipe INT NOT NULL,
-	quantities FLOAT NOT NULL
+	ingredientID INT NOT NULL,
+	recipeID INT NOT NULL,
+	ingredientQuantities FLOAT NOT NULL
 );
 
 -- Mettre les valeurs boolean par défaut "false"
 
-ALTER TABLE recipe
+ALTER TABLE recipes
 ALTER COLUMN vegetarian
 SET DEFAULT FALSE;
-
 -- Inserion des données dans la table "ingredient"
 
-INSERT INTO ingredient (name_of_ingredient, measurement)
+INSERT INTO ingredients (ingredientName, measurement)
 
 	VALUES
 		("glace au chocolat","grammes"),
@@ -87,9 +86,9 @@ INSERT INTO ingredient (name_of_ingredient, measurement)
 		("pecorino romano râpé","grammes");
 
 
--- Inserion des données dans la table "recipe"
+-- Inserion des données dans la table "recipes"
 
-INSERT INTO recipe (name_of_recipe, vegetarian, time_of_preparation, type_of_recipe, lvl)
+INSERT INTO recipes (recipeName, vegetarian, preparationTime, recipeType, lvl)
 
 	VALUES
 	("SANDWICH À LA GLACE AU CHOCOLAT", 1, "1h10", "Dessert", "Intermédiaire"),
@@ -97,7 +96,7 @@ INSERT INTO recipe (name_of_recipe, vegetarian, time_of_preparation, type_of_rec
 	("TIRAMISÙ", 0, "2h30", "Dessert", "Intermédiaire"),
 	("SPAGHETTI ALLA CARBONARA", 0, "30 min", "Plat principal", "Débutant");
 	
-INSERT INTO quantity (id_of_ingredient, id_of_recipe, quantities)
+INSERT INTO quantities (ingredientID, recipeID, ingredientQuantities)
 
 
 	VALUES
@@ -144,7 +143,7 @@ INSERT INTO quantity (id_of_ingredient, id_of_recipe, quantities)
 	(11,4,0),
 	(23,4,0);
 	
-INSERT INTO step (name_step,nb_step,content,recipe_id)
+INSERT INTO steps (stepName,stepNumber,content,recipeID)
 
 VALUES
 

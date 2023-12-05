@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LivreDeRecette
 {
-    public partial class QuestionModifyOrWatch : Form
+    public partial class frmQuestions : Form
     {
-        public QuestionModifyOrWatch()
+        public frmQuestions()
         {
             InitializeComponent();
 
@@ -30,8 +30,8 @@ namespace LivreDeRecette
 
         private void button1_Click(object sender, EventArgs e)
         {
-            VegegetarianOrNot vegetarianOrNot = new VegegetarianOrNot();
-            vegetarianOrNot.ShowDialog();
+            frmShowRecipes _showRecipes = new frmShowRecipes();
+            _showRecipes.ShowDialog();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -41,7 +41,8 @@ namespace LivreDeRecette
 
         private void boutonCreer_Click(object sender, EventArgs e)
         {
-
+            frmCreateDesign _createRecipes = new frmCreateDesign();
+            _createRecipes.ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace LivreDeRecette
 {
-    partial class Menu
+    partial class frmMenu
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,88 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.exitBtn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblEazy = new System.Windows.Forms.Label();
+            this.picLemonRight = new System.Windows.Forms.PictureBox();
+            this.picLemonLeft = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picLemonRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLemonLeft)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnNext
             // 
-            this.button1.BackColor = System.Drawing.Color.Khaki;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 72F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(752, 539);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(446, 124);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Continuer";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnNext.Font = new System.Drawing.Font("Bahnschrift Condensed", 50F);
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNext.Location = new System.Drawing.Point(1123, 843);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(211, 94);
+            this.btnNext.TabIndex = 1;
+            this.btnNext.Text = "Suivant";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.UseWaitCursor = true;
+            this.btnNext.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // btnExit
             // 
-            this.textBox1.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Monotype Corsiva", 72F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(676, 216);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(557, 108);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Bienvenue au";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btnExit.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(1740, 964);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(113, 54);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Quitter";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.UseWaitCursor = true;
+            this.btnExit.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // textBox2
+            // lblWelcome
             // 
-            this.textBox2.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Monotype Corsiva", 72F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(441, 364);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(1061, 108);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "\" Easy Peazy Lemon Squeezy \"";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Bahnschrift Condensed", 120F);
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(263, 197);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(911, 192);
+            this.lblWelcome.TabIndex = 5;
+            this.lblWelcome.Text = "Bienvenue dans";
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWelcome.UseWaitCursor = true;
+            this.lblWelcome.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // exitBtn
+            // lblEazy
             // 
-            this.exitBtn.BackColor = System.Drawing.Color.Khaki;
-            this.exitBtn.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.Location = new System.Drawing.Point(1687, 936);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(201, 75);
-            this.exitBtn.TabIndex = 4;
-            this.exitBtn.Text = "Quitter";
-            this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.lblEazy.AutoSize = true;
+            this.lblEazy.Font = new System.Drawing.Font("Bahnschrift Condensed", 95F, System.Drawing.FontStyle.Underline);
+            this.lblEazy.ForeColor = System.Drawing.Color.White;
+            this.lblEazy.Location = new System.Drawing.Point(617, 644);
+            this.lblEazy.Name = "lblEazy";
+            this.lblEazy.Size = new System.Drawing.Size(1204, 152);
+            this.lblEazy.TabIndex = 6;
+            this.lblEazy.Text = "Easy Peazy Lemon Squeezy";
+            this.lblEazy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEazy.UseWaitCursor = true;
             // 
-            // Menu
+            // picLemonRight
+            // 
+            this.picLemonRight.Image = ((System.Drawing.Image)(resources.GetObject("picLemonRight.Image")));
+            this.picLemonRight.Location = new System.Drawing.Point(1352, 41);
+            this.picLemonRight.Name = "picLemonRight";
+            this.picLemonRight.Size = new System.Drawing.Size(501, 500);
+            this.picLemonRight.TabIndex = 8;
+            this.picLemonRight.TabStop = false;
+            this.picLemonRight.UseWaitCursor = true;
+            // 
+            // picLemonLeft
+            // 
+            this.picLemonLeft.Image = ((System.Drawing.Image)(resources.GetObject("picLemonLeft.Image")));
+            this.picLemonLeft.Location = new System.Drawing.Point(46, 518);
+            this.picLemonLeft.Name = "picLemonLeft";
+            this.picLemonLeft.Size = new System.Drawing.Size(501, 500);
+            this.picLemonLeft.TabIndex = 7;
+            this.picLemonLeft.TabStop = false;
+            this.picLemonLeft.UseWaitCursor = true;
+            // 
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1914, 1041);
-            this.Controls.Add(this.exitBtn);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.ClientSize = new System.Drawing.Size(1911, 1057);
+            this.Controls.Add(this.picLemonRight);
+            this.Controls.Add(this.picLemonLeft);
+            this.Controls.Add(this.lblEazy);
+            this.Controls.Add(this.lblWelcome);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnNext);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "Menu";
+            this.Name = "frmMenu";
             this.Text = "Menu";
+            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.Interface_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picLemonRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLemonLeft)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button exitBtn;
-        internal System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblEazy;
+        private System.Windows.Forms.PictureBox picLemonLeft;
+        private System.Windows.Forms.PictureBox picLemonRight;
     }
 }
 
