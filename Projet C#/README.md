@@ -9,7 +9,7 @@ Fonctionnalités du livre de recette :
 
 	- Création des recettes dans une base de données
 
-	- Création / Suppression de recettes
+	- Création / Suppression de recettes (potentiellement)
 
 	- Connexion à son compte (ne pas faire pour l'instant)
 	- Ajout en favoris de certaine recette (ne pas faire pour l'instant)
