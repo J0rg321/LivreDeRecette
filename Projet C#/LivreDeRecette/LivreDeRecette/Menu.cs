@@ -15,6 +15,7 @@ namespace LivreDeRecette
         public frmMenu()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void Interface_Load(object sender, EventArgs e)

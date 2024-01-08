@@ -11,6 +11,8 @@ namespace LivreDeRecette
 {
     public class VeggieCheckBox : CheckBox
     {
+        public bool CheckedState { get; internal set; }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             Font f = new Font(new FontFamily("Bahnschrift"), 10);

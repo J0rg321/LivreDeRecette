@@ -15,7 +15,7 @@ namespace LivreDeRecette
         public frmQuestions()
         {
             InitializeComponent();
-
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void QuestionModifyOrWatch_Load(object sender, EventArgs e)

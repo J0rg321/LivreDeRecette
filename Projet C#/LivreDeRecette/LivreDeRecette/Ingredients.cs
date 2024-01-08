@@ -29,6 +29,7 @@ namespace LivreDeRecette
                 _ingrendient.measurement = (string)reader["measurement"];
                 ingredients.Add(_ingrendient);
             }
+            reader.Close();
             return ingredients;
         }
 

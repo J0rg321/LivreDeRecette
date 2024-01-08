@@ -15,6 +15,7 @@ namespace LivreDeRecette
         public frmCreateDesign()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void CreateRecipe_Load(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace LivreDeRecette
 
         private void txtTime_TextChanged(object sender, EventArgs e)
         {
-            protected void textBox1_KeyPress(object sender_, KeyPressEventArgs a)
+            /* protected void textBox1_KeyPress(object sender_, KeyPressEventArgs a)
             {
                 if (!char.IsControl(a.KeyChar) && !char.IsDigit(a.KeyChar) && (a.KeyChar != '.'))
                 {
@@ -51,6 +52,12 @@ namespace LivreDeRecette
                 if ((a.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
                 {
                     a.Handled = true;
-                }
+                } */
+        }
+
+        private void lblMinutes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

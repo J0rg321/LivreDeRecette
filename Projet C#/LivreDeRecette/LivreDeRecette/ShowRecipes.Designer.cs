@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblVeggies = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.lblContent = new System.Windows.Forms.Label();
             this.chklstIng = new System.Windows.Forms.CheckedListBox();
+            this.pnlRecipe = new System.Windows.Forms.Panel();
             this.chkVeggies = new LivreDeRecette.VeggieCheckBox();
-            this.vsbRecipes = new System.Windows.Forms.VScrollBar();
-            this.flpRecipes = new System.Windows.Forms.FlowLayoutPanel();
-            this.flpRecipes.SuspendLayout();
+            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVeggies
@@ -81,24 +86,22 @@
             this.chklstIng.Font = new System.Drawing.Font("Bahnschrift Condensed", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chklstIng.ForeColor = System.Drawing.Color.White;
             this.chklstIng.FormattingEnabled = true;
-            this.chklstIng.Items.AddRange(new object[] {
-            "Chocolat",
-            "Chocolat",
-            "Chocolat",
-            "Chocolat",
-            "Chocolat",
-            "Chocolat",
-            "Chocolat",
-            "Chocolat",
-            "Chocolat",
-            "Chocolat",
-            "Chocolat",
-            "Chocolat"});
             this.chklstIng.Location = new System.Drawing.Point(1503, 106);
             this.chklstIng.Name = "chklstIng";
             this.chklstIng.Size = new System.Drawing.Size(322, 46);
             this.chklstIng.TabIndex = 7;
             this.chklstIng.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            // 
+            // pnlRecipe
+            // 
+            this.pnlRecipe.AutoScroll = true;
+            this.pnlRecipe.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlRecipe.Location = new System.Drawing.Point(142, 266);
+            this.pnlRecipe.Margin = new System.Windows.Forms.Padding(20);
+            this.pnlRecipe.Name = "pnlRecipe";
+            this.pnlRecipe.Size = new System.Drawing.Size(1620, 600);
+            this.pnlRecipe.TabIndex = 11;
+            this.pnlRecipe.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecipe_Paint);
             // 
             // chkVeggies
             // 
@@ -113,21 +116,18 @@
             this.chkVeggies.UseVisualStyleBackColor = false;
             this.chkVeggies.CheckedChanged += new System.EventHandler(this.chkVeggies_CheckedChanged);
             // 
-            // vsbRecipes
+            // recipesBindingSource
             // 
-            this.vsbRecipes.Location = new System.Drawing.Point(0, 0);
-            this.vsbRecipes.Name = "vsbRecipes";
-            this.vsbRecipes.Size = new System.Drawing.Size(18, 255);
-            this.vsbRecipes.TabIndex = 10;
+            this.recipesBindingSource.DataSource = typeof(LivreDeRecette.Recipe);
             // 
-            // flpRecipes
+            // programBindingSource
             // 
-            this.flpRecipes.Controls.Add(this.vsbRecipes);
-            this.flpRecipes.Location = new System.Drawing.Point(99, 241);
-            this.flpRecipes.Name = "flpRecipes";
-            this.flpRecipes.Size = new System.Drawing.Size(613, 255);
-            this.flpRecipes.TabIndex = 11;
-            this.flpRecipes.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.programBindingSource.DataSource = typeof(LivreDeRecette.Program);
+            this.programBindingSource.CurrentChanged += new System.EventHandler(this.programBindingSource_CurrentChanged);
+            // 
+            // programBindingSource1
+            // 
+            this.programBindingSource1.DataSource = typeof(LivreDeRecette.Program);
             // 
             // frmShowRecipes
             // 
@@ -135,16 +135,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(1914, 1041);
-            this.Controls.Add(this.flpRecipes);
+            this.Controls.Add(this.pnlRecipe);
             this.Controls.Add(this.chkVeggies);
             this.Controls.Add(this.chklstIng);
             this.Controls.Add(this.lblContent);
-            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.lblVeggies);
+            this.Controls.Add(this.exitBtn);
             this.Name = "frmShowRecipes";
             this.Text = "ShowRecipes";
             this.Load += new System.EventHandler(this.ShowRecipes_Load);
-            this.flpRecipes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,7 +159,9 @@
         private System.Windows.Forms.Label lblContent;
         private System.Windows.Forms.CheckedListBox chklstIng;
         private VeggieCheckBox chkVeggies;
-        private System.Windows.Forms.VScrollBar vsbRecipes;
-        private System.Windows.Forms.FlowLayoutPanel flpRecipes;
+        private System.Windows.Forms.BindingSource programBindingSource;
+        private System.Windows.Forms.BindingSource programBindingSource1;
+        private System.Windows.Forms.BindingSource recipesBindingSource;
+        private System.Windows.Forms.Panel pnlRecipe;
     }
 }

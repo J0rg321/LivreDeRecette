@@ -44,14 +44,15 @@
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNext.AutoSize = true;
             this.btnNext.BackColor = System.Drawing.Color.CadetBlue;
             this.btnNext.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnNext.Font = new System.Drawing.Font("Bahnschrift Condensed", 50F);
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNext.Location = new System.Drawing.Point(1123, 843);
+            this.btnNext.Location = new System.Drawing.Point(1123, 828);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(211, 94);
+            this.btnNext.Size = new System.Drawing.Size(213, 94);
             this.btnNext.TabIndex = 1;
             this.btnNext.Text = "Suivant";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -91,7 +92,7 @@
             this.lblEazy.AutoSize = true;
             this.lblEazy.Font = new System.Drawing.Font("Bahnschrift Condensed", 95F, System.Drawing.FontStyle.Underline);
             this.lblEazy.ForeColor = System.Drawing.Color.White;
-            this.lblEazy.Location = new System.Drawing.Point(617, 644);
+            this.lblEazy.Location = new System.Drawing.Point(617, 628);
             this.lblEazy.Name = "lblEazy";
             this.lblEazy.Size = new System.Drawing.Size(1204, 152);
             this.lblEazy.TabIndex = 6;
@@ -131,6 +132,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNext);
+            this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmMenu";
             this.Text = "Menu";

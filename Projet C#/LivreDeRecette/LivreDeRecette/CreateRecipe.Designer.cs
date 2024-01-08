@@ -146,6 +146,7 @@
             this.lblMinutes.Size = new System.Drawing.Size(122, 46);
             this.lblMinutes.TabIndex = 13;
             this.lblMinutes.Text = "minutes";
+            this.lblMinutes.Click += new System.EventHandler(this.lblMinutes_Click);
             // 
             // chklstType
             // 
