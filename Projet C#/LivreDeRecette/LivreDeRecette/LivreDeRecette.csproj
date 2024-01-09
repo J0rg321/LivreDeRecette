@@ -60,6 +60,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CookMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CookMode.Designer.cs">
+      <DependentUpon>CookMode.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateRecipe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="VeggieCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="CookMode.resx">
+      <DependentUpon>CookMode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateRecipe.resx">
       <DependentUpon>CreateRecipe.cs</DependentUpon>
     </EmbeddedResource>

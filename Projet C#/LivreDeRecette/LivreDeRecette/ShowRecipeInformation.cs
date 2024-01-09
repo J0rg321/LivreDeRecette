@@ -20,7 +20,8 @@ namespace LivreDeRecette
     {
 
         public int recipeId;
-        public int stepNumber = 0;
+
+
         public frmShowRecipeInformation()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace LivreDeRecette
             int personCount = lstPerson.SelectedIndex+2; 
             txtIngredients.ScrollBars = ScrollBars.Both;
 
-            Recipe recipeInformations = Recipe.GetOne(recipeId);
+            // Recipe recipeInformations = Recipe.GetOne(recipeId);
             List<Quantities> recipeQuantities = Quantities.GetAll(recipeId);
             List<Steps> recipeSteps = Steps.GetAll(recipeId);
             
@@ -61,9 +62,10 @@ namespace LivreDeRecette
                 txtIngredients.Text += " " +ingredientQuantity.measurement + " " + "\r\n\r\n";
             }
 
-            lblSteps.Text = recipeSteps[0].stepNumber + " - " + recipeSteps[0].stepName + "\r\n" + recipeSteps[0].content + "\r\n\r\n";
-
-
+            foreach (Steps step in recipeSteps)
+            {
+                lblSteps.Text += step.stepNumber + " - " + step.stepName + "\r\n" + step.content + "\r\n\r\n";
+            }
         }
         private void lstPerson_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -75,73 +77,26 @@ namespace LivreDeRecette
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void pnlSteps_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void btnRignt_Click(object sender, EventArgs e)
-        {
-            List<Steps> steps = Steps.GetAll(recipeId);
-
-            foreach (Steps step in steps)
-            {
-                for (int i = 0; i< steps.Count; i++)
-                {
-                    if( i > steps.Count)
-                    {
-                        i = 0;
-                        btnRignt_Click(sender, e);
-                    }
-                    if (step.stepNumber == i)
-                    {
-                        if (stepNumber < steps.Count)
-                        {
-                            lblSteps.Text = steps[stepNumber].stepNumber + " - " + steps[stepNumber].stepName + "\r\n" + steps[stepNumber].content + "\r\n\r\n";
-                            stepNumber++;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void btnLeft_Click(object sender, EventArgs e)
-        {
-            List<Steps> steps = Steps.GetAll(recipeId);
-
-            if (stepNumber < 0)
-            {
-                stepNumber = 0;
-            }
-
-            if (stepNumber > 0)
-             {
-                stepNumber--;
-                lblSteps.Text = steps[stepNumber].stepNumber + " - " + steps[stepNumber].stepName + "\r\n" + steps[stepNumber ].content + "\r\n\r\n";
-             }
-             
-        }
-
         private void lblSteps_Click(object sender, EventArgs e)
         {
             
         }
+        
 
-        private void frmShowRecipeInformation_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void btnCookMode_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.A)
-            {
-                btnLeft_Click (sender, e);
-            }
-            if (e.KeyCode == Keys.D)
-            {
-                btnRignt_Click (sender, e);
-            }
+            int id = recipeId;
+            string ingredientText = txtIngredients.Text;
+
+            frmCookMode _frmCookMode = new frmCookMode();
+            _frmCookMode.recipeId = id;
+            _frmCookMode.ingredientText = ingredientText.ToString();
+            _frmCookMode.ShowDialog();
         }
     }
 }

@@ -31,8 +31,7 @@
             this.lstPerson = new System.Windows.Forms.ListBox();
             this.txtIngredients = new System.Windows.Forms.TextBox();
             this.pnlSteps = new System.Windows.Forms.Panel();
-            this.btnLeft = new System.Windows.Forms.Button();
-            this.btnRignt = new System.Windows.Forms.Button();
+            this.btnCookMode = new System.Windows.Forms.Button();
             this.lblSteps = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlSteps.SuspendLayout();
@@ -77,8 +76,7 @@
             // pnlSteps
             // 
             this.pnlSteps.AutoScroll = true;
-            this.pnlSteps.Controls.Add(this.btnLeft);
-            this.pnlSteps.Controls.Add(this.btnRignt);
+            this.pnlSteps.Controls.Add(this.btnCookMode);
             this.pnlSteps.Controls.Add(this.lblSteps);
             this.pnlSteps.Location = new System.Drawing.Point(431, 121);
             this.pnlSteps.Name = "pnlSteps";
@@ -86,29 +84,15 @@
             this.pnlSteps.TabIndex = 4;
             this.pnlSteps.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSteps_Paint);
             // 
-            // btnLeft
+            // btnCookMode
             // 
-            this.btnLeft.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLeft.Location = new System.Drawing.Point(376, 708);
-            this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(337, 53);
-            this.btnLeft.TabIndex = 0;
-            this.btnLeft.TabStop = false;
-            this.btnLeft.Text = "Etape précédente";
-            this.btnLeft.UseVisualStyleBackColor = true;
-            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
-            // 
-            // btnRignt
-            // 
-            this.btnRignt.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRignt.Location = new System.Drawing.Point(840, 708);
-            this.btnRignt.Name = "btnRignt";
-            this.btnRignt.Size = new System.Drawing.Size(337, 53);
-            this.btnRignt.TabIndex = 6;
-            this.btnRignt.TabStop = false;
-            this.btnRignt.Text = "Prochaine étape";
-            this.btnRignt.UseVisualStyleBackColor = true;
-            this.btnRignt.Click += new System.EventHandler(this.btnRignt_Click);
+            this.btnCookMode.Location = new System.Drawing.Point(600, 692);
+            this.btnCookMode.Name = "btnCookMode";
+            this.btnCookMode.Size = new System.Drawing.Size(292, 130);
+            this.btnCookMode.TabIndex = 7;
+            this.btnCookMode.Text = "Cuisine";
+            this.btnCookMode.UseVisualStyleBackColor = true;
+            this.btnCookMode.Click += new System.EventHandler(this.btnCookMode_Click);
             // 
             // lblSteps
             // 
@@ -142,7 +126,6 @@
             this.Name = "frmShowRecipeInformation";
             this.Text = "ShowRecipeInformation";
             this.Load += new System.EventHandler(this.frmShowRecipeInformation_Load);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmShowRecipeInformation_KeyUp);
             this.pnlSteps.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,8 +138,7 @@
         private System.Windows.Forms.TextBox txtIngredients;
         private System.Windows.Forms.Panel pnlSteps;
         private System.Windows.Forms.Label lblSteps;
-        private System.Windows.Forms.Button btnRignt;
-        private System.Windows.Forms.Button btnLeft;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCookMode;
     }
 }
