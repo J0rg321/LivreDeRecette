@@ -93,6 +93,11 @@ namespace LivreDeRecette
             {
                 for (int i = 0; i< steps.Count; i++)
                 {
+                    if( i > steps.Count)
+                    {
+                        i = 0;
+                        btnRignt_Click(sender, e);
+                    }
                     if (step.stepNumber == i)
                     {
                         if (stepNumber < steps.Count)
@@ -109,11 +114,17 @@ namespace LivreDeRecette
         {
             List<Steps> steps = Steps.GetAll(recipeId);
 
-             if (stepNumber > 0)
+            if (stepNumber < 0)
+            {
+                stepNumber = 0;
+            }
+
+            if (stepNumber > 0)
              {
                 stepNumber--;
                 lblSteps.Text = steps[stepNumber].stepNumber + " - " + steps[stepNumber].stepName + "\r\n" + steps[stepNumber ].content + "\r\n\r\n";
              }
+             
         }
 
         private void lblSteps_Click(object sender, EventArgs e)

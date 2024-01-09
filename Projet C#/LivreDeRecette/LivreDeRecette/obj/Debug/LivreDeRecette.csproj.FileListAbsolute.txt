@@ -47,3 +47,4 @@ C:\Users\pu47dfm\Documents\ProjetC#\Projet C#\LivreDeRecette\LivreDeRecette\bin\
 C:\Users\pu47dfm\Documents\ProjetC#\Projet C#\LivreDeRecette\LivreDeRecette\bin\Debug\MySqlConnector.xml
 C:\Users\pu47dfm\Documents\ProjetC#\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.csproj.CopyComplete
 C:\Users\pu47dfm\Documents\ProjetC#\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.frmShowRecipeInformation.resources
+C:\Users\pu47dfm\Documents\ProjetC#\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.csproj.SuggestedBindingRedirects.cache

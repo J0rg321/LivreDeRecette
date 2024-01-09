@@ -57,6 +57,7 @@ namespace LivreDeRecette
 
         private void FillTheRecipes(List<Recipe> recipes)
         {
+            pnlRecipe.Controls.Clear();
 
             int i = 0;
 
@@ -101,6 +102,8 @@ namespace LivreDeRecette
                 txtRecipe.ReadOnly = true;
                 txtRecipe.Multiline = true;
                 txtRecipe.Cursor = Cursors.Default;
+
+                
 
                 pnlRecipe.Controls.Add(txtRecipe);
                 txtRecipe.Controls.Add(btnRecipe);
