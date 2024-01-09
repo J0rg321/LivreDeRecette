@@ -1,2 +1,0 @@
--- SELECT * FROM recipes INNER JOIN quantities on recipes.id = recipeID INNER JOIN ingredients ON ingredients.id = ingredientID
-SELECT * from quantities inner join ingredients ON ingredients.id = ingredientID  INNER JOIN recipes ON recipes.id = recipeID WHERE recipeID = 1
