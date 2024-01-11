@@ -116,12 +116,15 @@
             // 
             this.chkVeggies.Appearance = System.Windows.Forms.Appearance.Button;
             this.chkVeggies.BackColor = System.Drawing.Color.Transparent;
+            this.chkVeggies.Checked = true;
+            this.chkVeggies.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.chkVeggies.Font = new System.Drawing.Font("Bahnschrift Condensed", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkVeggies.ForeColor = System.Drawing.Color.CadetBlue;
-            this.chkVeggies.Location = new System.Drawing.Point(791, 174);
+            this.chkVeggies.Location = new System.Drawing.Point(762, 169);
             this.chkVeggies.Name = "chkVeggies";
-            this.chkVeggies.Size = new System.Drawing.Size(20, 20);
+            this.chkVeggies.Size = new System.Drawing.Size(29, 31);
             this.chkVeggies.TabIndex = 9;
+            this.chkVeggies.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.chkVeggies.UseVisualStyleBackColor = false;
             this.chkVeggies.CheckedChanged += new System.EventHandler(this.chkVeggies_CheckedChanged);
             // 

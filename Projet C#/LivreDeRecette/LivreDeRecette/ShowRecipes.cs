@@ -7,6 +7,7 @@ using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -33,8 +34,6 @@ namespace LivreDeRecette
         }
 
         public List<string> checkedItems = new List<string>();
-
-        public List<string> checkedlol= new List<string>();
 
         private void chklstIngr_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -64,7 +63,15 @@ namespace LivreDeRecette
 
             if (recipes.Count == 0)
             {
-                System.Windows.MessageBox.Show("CA MARCHE");
+                System.Windows.Forms.Label lblNoRecipe = new System.Windows.Forms.Label();
+                lblNoRecipe.Text = "Il n'y a pas de recettes végétariènnes qui contiennent ces ingrédients.";
+                lblNoRecipe.Location = new System.Drawing.Point(222, 90);
+                lblNoRecipe.AutoSize = true;
+                lblNoRecipe.Font = new Font("Bahnschrift", 25);
+                lblNoRecipe.ForeColor = System.Drawing.Color.PowderBlue;
+
+                pnlRecipe.Controls.Add(lblNoRecipe);
+
             }
             foreach (var recipe in recipes)
             {
@@ -139,11 +146,13 @@ namespace LivreDeRecette
         {
             if (chkVeggies.Checked)
             {
+                chkVeggies.BackColor = Color.Black;
                 FillTheRecipes(Recipe.GetAllVeggies(checkedItems));
                 
             }
             else
             {
+                chkVeggies.BackColor = Color.Transparent;
                 FillTheRecipes(Recipe.GetAll(checkedItems));
             }
         }
@@ -171,7 +180,6 @@ namespace LivreDeRecette
         {
             int checkedIngredientCount = chklstIngr.CheckedItems.Count;
             checkedItems.Clear();
-            checkedlol.Add(" ");
 
             if (chkVeggies.Checked)
             {
@@ -205,12 +213,7 @@ namespace LivreDeRecette
                         checkedItems.Add(" ");
                     }
 
-                    foreach (string item in checkedItems)
-                    {
-                        System.Windows.MessageBox.Show(item);
-                    }
-
-                    FillTheRecipes(Recipe.GetAllVeggies(checkedlol));
+                    FillTheRecipes(Recipe.GetAllVeggies(checkedItems));
                 }
             }
             else
@@ -246,12 +249,8 @@ namespace LivreDeRecette
                     checkedItems.Clear();
                     checkedItems.Add(" ");
                 }
-                foreach(string item in checkedItems)
-                {
-                System.Windows.MessageBox.Show(item);
-                }
                 
-                FillTheRecipes(Recipe.GetAll(checkedlol));
+                FillTheRecipes(Recipe.GetAll(checkedItems));
             }
             }
         }

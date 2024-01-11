@@ -44,16 +44,7 @@
             this.lstPerson.FormattingEnabled = true;
             this.lstPerson.ItemHeight = 25;
             this.lstPerson.Items.AddRange(new object[] {
-            "10",
-            "9",
-            "8",
-            "7",
-            "6",
-            "5",
-            "4",
-            "3",
-            "2",
-            "1"});
+            ""});
             this.lstPerson.Location = new System.Drawing.Point(314, 185);
             this.lstPerson.Name = "lstPerson";
             this.lstPerson.Size = new System.Drawing.Size(42, 29);
