@@ -64,7 +64,7 @@
             this.btnExit.BackColor = System.Drawing.Color.CadetBlue;
             this.btnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1740, 964);
+            this.btnExit.Location = new System.Drawing.Point(1176, 939);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(113, 54);
             this.btnExit.TabIndex = 4;
@@ -135,6 +135,7 @@
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.Interface_Load);

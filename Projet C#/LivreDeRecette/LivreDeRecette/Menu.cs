@@ -15,7 +15,6 @@ namespace LivreDeRecette
         public frmMenu()
         {
             InitializeComponent();
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void Interface_Load(object sender, EventArgs e)
@@ -32,6 +31,8 @@ namespace LivreDeRecette
         {
             frmQuestions questions = new frmQuestions();
             questions.ShowDialog();
+            this.Hide();
+            this.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

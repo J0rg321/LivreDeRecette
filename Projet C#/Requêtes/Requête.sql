@@ -9,6 +9,8 @@
 
 -- Création de la base de donnéecooking "cooking" 
 
+DELETE DATABASE IF EXISTS cooking;
+
 CREATE DATABASE IF NOT EXISTS cooking;
 
 USE cooking;

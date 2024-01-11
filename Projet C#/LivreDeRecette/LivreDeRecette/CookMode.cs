@@ -25,24 +25,13 @@ namespace LivreDeRecette
         {
 
             this.ActiveControl = null;
-            MessageBox.Show(ingredientText);
-            lblQuantIng.Text = ingredientText;
+            txtIngredients.Text = ingredientText;
 
             List<Steps> recipeSteps = Steps.GetAll(recipeId);
-
-            
-                
-                
 
             lblSteps.Text = recipeSteps[0].stepNumber + " - " + recipeSteps[0].stepName + "\r\n" + recipeSteps[0].content + "\r\n\r\n";
         }
 
-
-
-        private void lblQuantIng_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnRignt_Click(object sender, EventArgs e)
         {
@@ -95,6 +84,19 @@ namespace LivreDeRecette
             {
                 btnRignt_Click(sender, e);
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmShowRecipes _frmShowRecipes = new frmShowRecipes();
+            _frmShowRecipes.ShowDialog();
+            this.Close();
+            this.Hide();
+        }
+
+        private void txtIngredients_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

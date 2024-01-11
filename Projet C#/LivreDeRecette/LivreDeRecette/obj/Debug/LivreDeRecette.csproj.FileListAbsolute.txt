@@ -49,3 +49,5 @@ C:\Users\pu47dfm\Documents\ProjetC#\Projet C#\LivreDeRecette\LivreDeRecette\obj\
 C:\Users\pu47dfm\Documents\ProjetC#\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.frmShowRecipeInformation.resources
 C:\Users\pu47dfm\Documents\ProjetC#\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.csproj.SuggestedBindingRedirects.cache
 C:\Users\pu47dfm\Documents\ProjetC#\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.frmCookMode.resources
+C:\GitHub\LivreDeRecette\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.frmCookMode.resources
+C:\GitHub\LivreDeRecette\Projet C#\LivreDeRecette\LivreDeRecette\obj\Debug\LivreDeRecette.frmShowRecipeInformation.resources

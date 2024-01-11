@@ -33,6 +33,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.lblWish = new System.Windows.Forms.Label();
             this.lblToday = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -96,18 +97,33 @@
             this.lblToday.TabIndex = 10;
             this.lblToday.Text = "aujourd\'hui ?";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(12, 975);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(252, 54);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "Revenir en arrière";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmQuestions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(1914, 1041);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblToday);
             this.Controls.Add(this.lblWish);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnSearch);
             this.Name = "frmQuestions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Questions";
             this.Load += new System.EventHandler(this.QuestionModifyOrWatch_Load);
             this.ResumeLayout(false);
@@ -122,5 +138,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblWish;
         private System.Windows.Forms.Label lblToday;
+        private System.Windows.Forms.Button btnBack;
     }
 }

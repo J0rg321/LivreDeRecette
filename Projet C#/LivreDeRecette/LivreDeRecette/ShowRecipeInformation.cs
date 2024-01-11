@@ -35,12 +35,11 @@ namespace LivreDeRecette
             this.ActiveControl = null;
 
             int personCount = lstPerson.SelectedIndex+2; 
-            txtIngredients.ScrollBars = ScrollBars.Both;
 
             // Recipe recipeInformations = Recipe.GetOne(recipeId);
             List<Quantities> recipeQuantities = Quantities.GetAll(recipeId);
             List<Steps> recipeSteps = Steps.GetAll(recipeId);
-            
+            int i = 1;
 
             foreach (Quantities ingredientQuantity in recipeQuantities)
             {
@@ -59,12 +58,23 @@ namespace LivreDeRecette
                 {
                     txtIngredients.Text += (ingredientQuantity.ingredientQuantities * personCount);
                 }
-                txtIngredients.Text += " " +ingredientQuantity.measurement + " " + "\r\n\r\n";
+                if (i == recipeQuantities.Count())
+                {
+                    txtIngredients.Text += " " + ingredientQuantity.measurement;
+                }
+                else
+                {
+                    txtIngredients.Text += " " + ingredientQuantity.measurement +"\r\n\r\n";
+                }
+                
+
+
+                i++;
             }
 
             foreach (Steps step in recipeSteps)
             {
-                lblSteps.Text += step.stepNumber + " - " + step.stepName + "\r\n" + step.content + "\r\n\r\n";
+                txtSteps.Text += step.stepNumber + " - " + step.stepName + "\r\n" + step.content + "\r\n\r\n";
             }
         }
         private void lstPerson_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,17 +87,6 @@ namespace LivreDeRecette
 
         }
 
-
-        private void pnlSteps_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void lblSteps_Click(object sender, EventArgs e)
-        {
-            
-        }
-        
-
         private void btnCookMode_Click(object sender, EventArgs e)
         {
             int id = recipeId;
@@ -97,6 +96,21 @@ namespace LivreDeRecette
             _frmCookMode.recipeId = id;
             _frmCookMode.ingredientText = ingredientText.ToString();
             _frmCookMode.ShowDialog();
+            this.Hide();
+            this.Close();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmShowRecipes _frmShowRecipes = new frmShowRecipes();
+            _frmShowRecipes.ShowDialog();
+            this.Hide();
+            this.Close();
+        }
+
+        private void txtSteps_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -43,6 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.picLemonLeft = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picLemonLeft)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,12 +216,26 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Eazy Peazy Lemon Squeezy";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(12, 975);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(252, 54);
+            this.btnBack.TabIndex = 19;
+            this.btnBack.Text = "Revenir en arrière";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmCreateDesign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(1914, 1041);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.picLemonLeft);
             this.Controls.Add(this.button1);
@@ -260,5 +275,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox picLemonLeft;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

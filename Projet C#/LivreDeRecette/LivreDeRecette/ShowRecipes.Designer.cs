@@ -28,39 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblVeggies = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.lblContent = new System.Windows.Forms.Label();
-            this.chklstIng = new System.Windows.Forms.CheckedListBox();
             this.pnlRecipe = new System.Windows.Forms.Panel();
+            this.chklstIngr = new System.Windows.Forms.CheckedListBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.chkVeggies = new LivreDeRecette.VeggieCheckBox();
-            this.recipesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVeggies
             // 
             this.lblVeggies.AutoSize = true;
-            this.lblVeggies.Font = new System.Drawing.Font("Bahnschrift Condensed", 80F);
+            this.lblVeggies.Font = new System.Drawing.Font("Bahnschrift Condensed", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVeggies.ForeColor = System.Drawing.Color.White;
-            this.lblVeggies.Location = new System.Drawing.Point(50, 50);
+            this.lblVeggies.Location = new System.Drawing.Point(322, 136);
             this.lblVeggies.Name = "lblVeggies";
-            this.lblVeggies.Size = new System.Drawing.Size(578, 128);
+            this.lblVeggies.Size = new System.Drawing.Size(446, 77);
             this.lblVeggies.TabIndex = 0;
-            this.lblVeggies.Text = "Végétarienne ?";
-            this.lblVeggies.Click += new System.EventHandler(this.label1_Click);
+            this.lblVeggies.Text = "Option végétarien ?";
+            this.lblVeggies.Click += new System.EventHandler(this.ShowRecipes_Load);
             // 
             // exitBtn
             // 
             this.exitBtn.BackColor = System.Drawing.Color.CadetBlue;
             this.exitBtn.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.Location = new System.Drawing.Point(1755, 950);
+            this.exitBtn.Location = new System.Drawing.Point(1789, 975);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(113, 54);
             this.exitBtn.TabIndex = 5;
@@ -72,62 +66,64 @@
             // lblContent
             // 
             this.lblContent.AutoSize = true;
-            this.lblContent.Font = new System.Drawing.Font("Bahnschrift Condensed", 80F);
+            this.lblContent.Font = new System.Drawing.Font("Bahnschrift Condensed", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContent.ForeColor = System.Drawing.Color.White;
-            this.lblContent.Location = new System.Drawing.Point(1108, 50);
+            this.lblContent.Location = new System.Drawing.Point(969, 136);
             this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(389, 128);
+            this.lblContent.Size = new System.Drawing.Size(234, 77);
             this.lblContent.TabIndex = 6;
             this.lblContent.Text = "Contient :";
-            // 
-            // chklstIng
-            // 
-            this.chklstIng.BackColor = System.Drawing.Color.CadetBlue;
-            this.chklstIng.Font = new System.Drawing.Font("Bahnschrift Condensed", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklstIng.ForeColor = System.Drawing.Color.White;
-            this.chklstIng.FormattingEnabled = true;
-            this.chklstIng.Location = new System.Drawing.Point(1503, 106);
-            this.chklstIng.Name = "chklstIng";
-            this.chklstIng.Size = new System.Drawing.Size(322, 46);
-            this.chklstIng.TabIndex = 7;
-            this.chklstIng.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // pnlRecipe
             // 
             this.pnlRecipe.AutoScroll = true;
             this.pnlRecipe.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlRecipe.Location = new System.Drawing.Point(142, 266);
+            this.pnlRecipe.Location = new System.Drawing.Point(138, 282);
             this.pnlRecipe.Margin = new System.Windows.Forms.Padding(20);
             this.pnlRecipe.Name = "pnlRecipe";
-            this.pnlRecipe.Size = new System.Drawing.Size(1620, 600);
+            this.pnlRecipe.Size = new System.Drawing.Size(1626, 600);
             this.pnlRecipe.TabIndex = 11;
             this.pnlRecipe.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRecipe_Paint);
             // 
+            // chklstIngr
+            // 
+            this.chklstIngr.BackColor = System.Drawing.Color.CadetBlue;
+            this.chklstIngr.Font = new System.Drawing.Font("Bahnschrift Condensed", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklstIngr.ForeColor = System.Drawing.Color.White;
+            this.chklstIngr.FormattingEnabled = true;
+            this.chklstIngr.Location = new System.Drawing.Point(1235, 136);
+            this.chklstIngr.Name = "chklstIngr";
+            this.chklstIngr.Size = new System.Drawing.Size(322, 88);
+            this.chklstIngr.Sorted = true;
+            this.chklstIngr.TabIndex = 13;
+            this.chklstIngr.SelectedIndexChanged += new System.EventHandler(this.chklstIngr_SelectedIndexChanged);
+            this.chklstIngr.MouseUp += new System.Windows.Forms.MouseEventHandler(this.chklstIngr_MouseUp);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(12, 975);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(252, 54);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.Text = "Revenir en arrière";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // chkVeggies
             // 
+            this.chkVeggies.Appearance = System.Windows.Forms.Appearance.Button;
             this.chkVeggies.BackColor = System.Drawing.Color.Transparent;
             this.chkVeggies.Font = new System.Drawing.Font("Bahnschrift Condensed", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkVeggies.ForeColor = System.Drawing.Color.White;
-            this.chkVeggies.Location = new System.Drawing.Point(643, 101);
+            this.chkVeggies.ForeColor = System.Drawing.Color.CadetBlue;
+            this.chkVeggies.Location = new System.Drawing.Point(791, 174);
             this.chkVeggies.Name = "chkVeggies";
-            this.chkVeggies.Size = new System.Drawing.Size(329, 51);
+            this.chkVeggies.Size = new System.Drawing.Size(20, 20);
             this.chkVeggies.TabIndex = 9;
-            this.chkVeggies.Text = "Veuillez cocher si oui";
             this.chkVeggies.UseVisualStyleBackColor = false;
             this.chkVeggies.CheckedChanged += new System.EventHandler(this.chkVeggies_CheckedChanged);
-            // 
-            // recipesBindingSource
-            // 
-            this.recipesBindingSource.DataSource = typeof(LivreDeRecette.Recipe);
-            // 
-            // programBindingSource
-            // 
-            this.programBindingSource.DataSource = typeof(LivreDeRecette.Program);
-            this.programBindingSource.CurrentChanged += new System.EventHandler(this.programBindingSource_CurrentChanged);
-            // 
-            // programBindingSource1
-            // 
-            this.programBindingSource1.DataSource = typeof(LivreDeRecette.Program);
             // 
             // frmShowRecipes
             // 
@@ -135,18 +131,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(1914, 1041);
+            this.Controls.Add(this.chklstIngr);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pnlRecipe);
             this.Controls.Add(this.chkVeggies);
-            this.Controls.Add(this.chklstIng);
             this.Controls.Add(this.lblContent);
             this.Controls.Add(this.lblVeggies);
             this.Controls.Add(this.exitBtn);
             this.Name = "frmShowRecipes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ShowRecipes";
             this.Load += new System.EventHandler(this.ShowRecipes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.recipesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,11 +152,9 @@
         private System.Windows.Forms.Label lblVeggies;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Label lblContent;
-        private System.Windows.Forms.CheckedListBox chklstIng;
         private VeggieCheckBox chkVeggies;
-        private System.Windows.Forms.BindingSource programBindingSource;
-        private System.Windows.Forms.BindingSource programBindingSource1;
-        private System.Windows.Forms.BindingSource recipesBindingSource;
         private System.Windows.Forms.Panel pnlRecipe;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.CheckedListBox chklstIngr;
     }
 }

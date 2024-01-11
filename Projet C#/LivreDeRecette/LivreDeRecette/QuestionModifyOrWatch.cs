@@ -23,15 +23,12 @@ namespace LivreDeRecette
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             frmShowRecipes _showRecipes = new frmShowRecipes();
             _showRecipes.ShowDialog();
+            this.Hide();
+            this.Close();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -43,6 +40,16 @@ namespace LivreDeRecette
         {
             frmCreateDesign _createRecipes = new frmCreateDesign();
             _createRecipes.ShowDialog();
+            this.Hide();
+            this.Close();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmMenu _frmMenu = new frmMenu();
+            _frmMenu.ShowDialog();
+            this.Hide();
+            this.Close();
         }
     }
 }
