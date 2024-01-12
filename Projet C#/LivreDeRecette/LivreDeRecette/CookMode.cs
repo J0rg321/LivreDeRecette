@@ -108,5 +108,11 @@ namespace LivreDeRecette
         {
             Application.Exit();
         }
+        
+
+        private void lblDirections_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

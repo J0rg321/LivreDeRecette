@@ -35,6 +35,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.txtIngredients = new System.Windows.Forms.TextBox();
             this.exitBtn = new System.Windows.Forms.Button();
+            this.lblDirections = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCookingMode
@@ -43,7 +44,7 @@
             this.lblCookingMode.BackColor = System.Drawing.Color.DarkCyan;
             this.lblCookingMode.Font = new System.Drawing.Font("Bahnschrift Condensed", 80F);
             this.lblCookingMode.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCookingMode.Location = new System.Drawing.Point(758, 18);
+            this.lblCookingMode.Location = new System.Drawing.Point(904, 129);
             this.lblCookingMode.Name = "lblCookingMode";
             this.lblCookingMode.Size = new System.Drawing.Size(518, 128);
             this.lblCookingMode.TabIndex = 0;
@@ -133,10 +134,24 @@
             this.exitBtn.UseWaitCursor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // lblDirections
+            // 
+            this.lblDirections.AutoSize = true;
+            this.lblDirections.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblDirections.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDirections.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblDirections.Location = new System.Drawing.Point(1008, 844);
+            this.lblDirections.Name = "lblDirections";
+            this.lblDirections.Size = new System.Drawing.Size(273, 33);
+            this.lblDirections.TabIndex = 17;
+            this.lblDirections.Text = "Déplacez vous avec \"A\" et \"D\"";
+            this.lblDirections.Click += new System.EventHandler(this.lblDirections_Click);
+            // 
             // frmCookMode
             // 
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(1914, 1041);
+            this.Controls.Add(this.lblDirections);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.txtIngredients);
             this.Controls.Add(this.btnBack);
@@ -163,5 +178,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtIngredients;
         private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Label lblDirections;
     }
 }
