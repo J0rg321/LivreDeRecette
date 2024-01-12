@@ -64,7 +64,7 @@ namespace LivreDeRecette
             if (recipes.Count == 0)
             {
                 System.Windows.Forms.Label lblNoRecipe = new System.Windows.Forms.Label();
-                lblNoRecipe.Text = "Il n'y a pas de recettes végétariènnes qui contiennent ces ingrédients.";
+                lblNoRecipe.Text = "Il n'y a pas de recettes végétariennes qui contiennent ces ingrédients.";
                 lblNoRecipe.Location = new System.Drawing.Point(222, 90);
                 lblNoRecipe.AutoSize = true;
                 lblNoRecipe.Font = new Font("Bahnschrift", 25);
@@ -90,19 +90,19 @@ namespace LivreDeRecette
                 if (j % 2 != 0)
                 {
                     txtRecipe.Location = new System.Drawing.Point(
-                    this.ClientSize.Width / 2 - pnlRecipe.Size.Width / 2, (10 + (200 * i)));
+                    this.ClientSize.Width / 2 - pnlRecipe.Size.Width / 2, (10 + (250 * i)));
                 }
                 else
                 {
                     txtRecipe.Location = new System.Drawing.Point(
-                    this.ClientSize.Width * 3 - pnlRecipe.Size.Width * 3, 10 + (200 * i));
+                    this.ClientSize.Width * 3 - pnlRecipe.Size.Width * 3, 10 + (250 * i));
                     i += 2;
                 }
 
                 j++;
 
                 txtRecipe.AutoSize = false;
-                txtRecipe.Size = new System.Drawing.Size(600, 350);
+                txtRecipe.Size = new System.Drawing.Size(600, 425);
                 txtRecipe.BackColor = System.Drawing.Color.CadetBlue;
                 txtRecipe.ForeColor = System.Drawing.Color.White;
                 txtRecipe.Font = new Font("Bahnschrift", 25);
@@ -115,18 +115,18 @@ namespace LivreDeRecette
                 pnlRecipe.Controls.Add(txtRecipe);
                 txtRecipe.Controls.Add(btnRecipe);
 
-                txtRecipe.Text += recipe.recipeName.ToString() + "\r\n";
+                txtRecipe.Text += recipe.recipeName.ToString() + "\r\n\r\n" + "Cette recette est : ";
                 if (recipe.vegetarian == true)
                 {
-                    txtRecipe.Text += "Végetarien";
+                    txtRecipe.Text += "Végetarienne";
                 }
                 else
                 {
-                    txtRecipe.Text += "Non-végetarien";
+                    txtRecipe.Text += "Non-végetarienne";
                 }
 
-                txtRecipe.Text += "\r\n" + recipe.preparationTime.ToString() + "\r\n" + recipe.recipeType.ToString() +
-                "\r\n" + recipe.lvl.ToString();
+                txtRecipe.Text += "\r\n" + "Temps de préparation : " + recipe.preparationTime.ToString() + " minutes" + "\r\n" + "Cette recette est un :" + recipe.recipeType +
+                "\r\n" + "Niveau : " + recipe.lvl;
 
             }
         }

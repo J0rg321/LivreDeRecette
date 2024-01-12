@@ -17,7 +17,7 @@ namespace LivreDeRecette
         public int recipeID { get; set; }
         public string recipeName { get; set; }
         public bool vegetarian { get; set; }
-        public string preparationTime { get; set; }
+        public int preparationTime { get; set; }
         public string recipeType { get; set; }
         public string lvl { get; set; }
         public string ingredientName { get; set; }
@@ -47,7 +47,7 @@ namespace LivreDeRecette
                 _recipe.recipeID = (int)reader["recipeID"];
                 _recipe.recipeName = (string)reader["recipeName"];
                 _recipe.vegetarian = (bool)reader["vegetarian"];
-                _recipe.preparationTime = (string)reader["preparationTime"];
+                _recipe.preparationTime = (int)reader["preparationTime"];
                 _recipe.recipeType = (string)reader["recipeType"];
                 _recipe.lvl = (string)reader["lvl"];
                 
@@ -79,7 +79,7 @@ namespace LivreDeRecette
                 _recipe.recipeID = (int)reader["recipeID"];
                 _recipe.recipeName = (string)reader["recipeName"];
                 _recipe.vegetarian = (bool)reader["vegetarian"];
-                _recipe.preparationTime = (string)reader["preparationTime"];
+                _recipe.preparationTime = (int)reader["preparationTime"];
                 _recipe.recipeType = (string)reader["recipeType"];
                 _recipe.lvl = (string)reader["lvl"];
                 if (_recipe.vegetarian == true)
@@ -102,7 +102,7 @@ namespace LivreDeRecette
                 _recipe.recipeID = (int)reader["recipeID"];
                 _recipe.recipeName = (string)reader["recipeName"];
                 _recipe.vegetarian = (bool)reader["vegetarian"];
-                _recipe.preparationTime = (string)reader["preparationTime"];
+                _recipe.preparationTime = (int)reader["preparationTime"];
                 _recipe.recipeType = (string)reader["recipeType"];
                 _recipe.lvl = (string)reader["lvl"];
                 _recipe.ingredientName = (string)reader["ingredientName"];
