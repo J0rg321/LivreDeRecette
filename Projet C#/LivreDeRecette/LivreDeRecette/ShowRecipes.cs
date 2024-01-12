@@ -142,7 +142,7 @@ namespace LivreDeRecette
         {
             if (chkVeggies.Checked)
             {
-                chkVeggies.BackColor = Color.Black;
+                chkVeggies.BackColor = Color.DarkCyan;
                 FillTheRecipes(Recipe.GetAllVeggies(checkedItems));
                 
             }
