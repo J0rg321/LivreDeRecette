@@ -24,8 +24,7 @@ namespace LivreDeRecette
         }
 
         private void frmCookMode_Load(object sender, EventArgs e)
-        {
-
+        {   // Show the first step by a recipe from his ID
             this.ActiveControl = null;
             txtIngredients.Text = ingredientText;
 
@@ -36,13 +35,14 @@ namespace LivreDeRecette
 
 
         private void btnRignt_Click(object sender, EventArgs e)
-        {
+        {   // When btnRight is clicked, show the next step from the list, by order
             List<Steps> steps = Steps.GetAll(recipeId);
 
             foreach (Steps step in steps)
             {
                 for (int i = 0; i < steps.Count; i++)
                 {
+                    // If the displayed step, is the last one, show this active displayed step
                     if (i > steps.Count)
                     {
                         i = 0;
@@ -57,6 +57,7 @@ namespace LivreDeRecette
                         }
                     }
                 }
+                this.ActiveControl = null;
             }
             this.TabStop = false;
             TabControl tabControl = null;
@@ -64,8 +65,10 @@ namespace LivreDeRecette
 
         private void btnLeft_Click(object sender, EventArgs e)
         {
+            // If the displayed step, is the first one, show this active displayed step
             List<Steps> steps = Steps.GetAll(recipeId);
 
+            //
             if (stepNumber < 0)
             {
                 stepNumber = 0;
@@ -76,11 +79,12 @@ namespace LivreDeRecette
                 stepNumber--;
                 lblSteps.Text = steps[stepNumber].stepNumber + " - " + steps[stepNumber].stepName + "\r\n" + steps[stepNumber].content + "\r\n\r\n";
             }
-            TabControl tabControl = null;
+            this.ActiveControl = null;
         }
 
         private void frmShowRecipeInformation_KeyUp(object sender, KeyEventArgs e)
         {
+            // Use the function "Key Up" to use the buttons Left and Right
             if (e.KeyCode == Keys.A)
             {
                 btnLeft_Click(sender, e);

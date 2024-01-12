@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace LivreDeRecette
 {
+
+    // This page is inactive at the moment
     public partial class frmCreateDesign : Form
     {
         public frmCreateDesign()

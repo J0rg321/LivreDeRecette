@@ -43,6 +43,8 @@ namespace LivreDeRecette
 
         private void ShowRecipes_Load(object sender, EventArgs e)
         {
+            // Add the items to the checkList chklstIngr
+
             List<Ingredients> ingredients = Ingredients.GetAll();
             foreach (var ingredient in ingredients)
             {
@@ -54,10 +56,14 @@ namespace LivreDeRecette
 
         private void FillTheRecipes(List<Recipe> recipes)
         {
+            // Fill the recipe panel with all the different recipes from the SQL Data Base and their basic information
+
             pnlRecipe.Controls.Clear();
 
             int i = 0;
             int j = 1;
+
+            // If thère's no displayed recipe, show this message.
 
             if (recipes.Count == 0)
             {
@@ -71,6 +77,9 @@ namespace LivreDeRecette
                 pnlRecipe.Controls.Add(lblNoRecipe);
 
             }
+
+            // Show the recipes with their basic information +  a button to show the steps and ingredients
+
             foreach (var recipe in recipes)
             {
                 System.Windows.Forms.TextBox txtRecipe = new System.Windows.Forms.TextBox();
@@ -140,6 +149,8 @@ namespace LivreDeRecette
 
         private void chkVeggies_CheckedChanged(object sender, EventArgs e)
         {
+            // If the checkBox is clicked, thes the background is on DarkCyan, else, it's transparent
+
             if (chkVeggies.Checked)
             {
                 chkVeggies.BackColor = Color.DarkCyan;
@@ -169,6 +180,8 @@ namespace LivreDeRecette
 
         private void chklstIngr_MouseUp(object sender, MouseEventArgs e)
         {
+            // Add a part to the SQL request to show the recipes who contain the selected ingredients
+
             int checkedIngredientCount = chklstIngr.CheckedItems.Count;
             checkedItems.Clear();
 
@@ -209,6 +222,7 @@ namespace LivreDeRecette
             }
             else
             {
+                // Add a part to the SQL request to show the recipes who are vegertarian and contain the selected ingredients
 
                 for (int j = 0; j < checkedIngredientCount; j++)
                 {

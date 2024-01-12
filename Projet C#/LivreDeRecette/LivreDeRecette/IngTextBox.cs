@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
+
+// Useless Code
 /*namespace LivreDeRecette
 {
     internal class IngTextBox

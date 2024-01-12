@@ -1,4 +1,9 @@
-﻿using MySqlConnector;
+﻿/// Author : Jorge Miguel Pinto Costa - Alessia Mavraj
+/// Porject : Livre de recettes
+/// Date : 12.01.2024
+/// Version 1.0
+
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,10 +18,7 @@ namespace LivreDeRecette
         public static MySqlConnection conn;
 
 
-        /// <summary>
-        /// Point d'entrée principal de l'application.
-        /// </summary>
-        /// 
+        // Opens the SQL Connection
 
 
         [STAThread]

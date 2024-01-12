@@ -11,7 +11,7 @@ using System.Reflection;
 
 namespace LivreDeRecette
 {
-
+    // Select all the recipes informations with or without being Vegetarian
     public class Recipe
     {
         public int recipeID { get; set; }
@@ -25,6 +25,8 @@ namespace LivreDeRecette
         public float ingredientQuantities { get; set; }
         public int ingredientID { get; set; }
 
+
+        // Select al the Recipes
         public static List<Recipe> GetAll(List <string> sortIngredients)
         {
             List<Recipe> recipes = new List<Recipe>();
@@ -57,6 +59,7 @@ namespace LivreDeRecette
             return recipes;
         }
 
+        // Select all the vegetarian recipes
         public static List<Recipe> GetAllVeggies(List<string> sortIngredients)
         {
             List<Recipe> recipes = new List<Recipe>();
@@ -91,6 +94,8 @@ namespace LivreDeRecette
             reader.Close();
             return recipes;
         }
+
+        // Select all the informations from one recipe by his ID
         public static Recipe GetOne(int id)
         {
             string query = "SELECT * from quantities inner join ingredients ON ingredients.id = ingredientID  " +

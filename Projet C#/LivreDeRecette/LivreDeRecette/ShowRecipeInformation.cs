@@ -54,6 +54,8 @@ namespace LivreDeRecette
             List<Steps> recipeSteps = Steps.GetAll(recipeId);
             int i = 1;
 
+            // Show the informations from the recipe by his ID
+
             foreach (Quantities ingredientQuantity in recipeQuantities)
             {
                 txtIngredients.Text += "- " + ingredientQuantity.ingredientName.ToString() + " : ";
@@ -79,11 +81,11 @@ namespace LivreDeRecette
                 {
                     txtIngredients.Text += " " + ingredientQuantity.measurement +"\r\n\r\n";
                 }
-                
-
-
                 i++;
             }
+
+            // Refresh and show all the steps from the selected recipe by his ID
+
             txtSteps.Text = null;
             foreach (Steps step in recipeSteps)
             {

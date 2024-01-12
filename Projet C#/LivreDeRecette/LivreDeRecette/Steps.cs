@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace LivreDeRecette
 {
+    // Select all the steps from a specific recipe by his ID
     public class Steps
     {
         public int id { get; set; }

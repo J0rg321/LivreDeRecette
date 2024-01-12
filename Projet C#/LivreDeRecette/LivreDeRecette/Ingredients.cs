@@ -16,6 +16,7 @@ namespace LivreDeRecette
 
         public static List<Ingredients> GetAll()
         {
+            // Take all the ingredients form the SQL Data Base
             List<Ingredients> ingredients = new List<Ingredients>();
 
             string query = "select * from ingredients";

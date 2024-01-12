@@ -10,6 +10,7 @@ namespace LivreDeRecette
 {
     public class Quantities
     {
+        // Select all the ingredients to their respective recipes with the quantities from the SQL Data Base
         public int id { get; set; }
         public int ingredientID { get; set; }
         public string ingredientName { get; set; }

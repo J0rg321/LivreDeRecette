@@ -16,3 +16,16 @@ Fonctionnalités du livre de recette :
 
 	- Choisir la possibilité de lancer le mode cuisine
 		➡ Affiche les étapes à suivre une par une, passer d'une étape à l'autre avec la touche [->] ou par un autre moyen
+
+Comment Build ? :
+
+	- Il est necessaire d'avoir un serveur SQL ainsi qu'Heidi SQL
+
+	- Il faut en suite créer un utilisateur avec ces informations
+	  server = "localhost";
+	  username = "root";
+	  password = "Pa$$w0rd";
+
+	- Ensuite, il faur^t executer la requete SQL qui est disponible dans le dossier : Requêtes
+
+	- Vous pourrez ensuite executer le code
