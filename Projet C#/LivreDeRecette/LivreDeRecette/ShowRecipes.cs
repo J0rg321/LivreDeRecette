@@ -26,11 +26,12 @@ namespace LivreDeRecette
         public frmShowRecipes()
         {
             InitializeComponent();
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         public List<string> checkedItems = new List<string>();
@@ -47,9 +48,6 @@ namespace LivreDeRecette
             {
                 chklstIngr.Items.Add(ingredient.ingredientName);
             }
-
-            pnlRecipe.Location = new System.Drawing.Point(
-            this.ClientSize.Width / 2 - pnlRecipe.Size.Width / 2, 300);
             FillTheRecipes(Recipe.GetAll(checkedItems));
 
         }
@@ -65,7 +63,7 @@ namespace LivreDeRecette
             {
                 System.Windows.Forms.Label lblNoRecipe = new System.Windows.Forms.Label();
                 lblNoRecipe.Text = "Il n'y a pas de recettes végétariennes qui contiennent ces ingrédients.";
-                lblNoRecipe.Location = new System.Drawing.Point(222, 90);
+                lblNoRecipe.Location = new System.Drawing.Point(465, 90);
                 lblNoRecipe.AutoSize = true;
                 lblNoRecipe.Font = new Font("Bahnschrift", 25);
                 lblNoRecipe.ForeColor = System.Drawing.Color.PowderBlue;
@@ -89,13 +87,11 @@ namespace LivreDeRecette
 
                 if (j % 2 != 0)
                 {
-                    txtRecipe.Location = new System.Drawing.Point(
-                    this.ClientSize.Width / 2 - pnlRecipe.Size.Width / 2, (10 + (250 * i)));
+                    txtRecipe.Location = new System.Drawing.Point( 200, (10 + (250 * i)));
                 }
                 else
                 {
-                    txtRecipe.Location = new System.Drawing.Point(
-                    this.ClientSize.Width * 3 - pnlRecipe.Size.Width * 3, 10 + (250 * i));
+                    txtRecipe.Location = new System.Drawing.Point( 1100, 10 + (250 * i));
                     i += 2;
                 }
 
@@ -125,7 +121,7 @@ namespace LivreDeRecette
                     txtRecipe.Text += "Non-végetarienne";
                 }
 
-                txtRecipe.Text += "\r\n" + "Temps de préparation : " + recipe.preparationTime.ToString() + " minutes" + "\r\n" + "Cette recette est un :" + recipe.recipeType +
+                txtRecipe.Text += "\r\n" + "Temps de préparation : " + recipe.preparationTime.ToString() + " minutes" + "\r\n" + "Cette recette est un : " + recipe.recipeType +
                 "\r\n" + "Niveau : " + recipe.lvl;
 
             }
@@ -155,11 +151,6 @@ namespace LivreDeRecette
                 chkVeggies.BackColor = Color.Transparent;
                 FillTheRecipes(Recipe.GetAll(checkedItems));
             }
-        }
-
-        private void programBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
         }
 
 

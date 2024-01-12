@@ -102,7 +102,7 @@
             this.btnBack.BackColor = System.Drawing.Color.CadetBlue;
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(12, 975);
+            this.btnBack.Location = new System.Drawing.Point(12, 1011);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(252, 54);
             this.btnBack.TabIndex = 11;

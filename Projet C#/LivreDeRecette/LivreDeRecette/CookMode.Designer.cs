@@ -34,6 +34,7 @@
             this.btnRignt = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.txtIngredients = new System.Windows.Forms.TextBox();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCookingMode
@@ -93,10 +94,11 @@
             this.btnBack.BackColor = System.Drawing.Color.CadetBlue;
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(12, 975);
+            this.btnBack.Location = new System.Drawing.Point(12, 1017);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(310, 54);
             this.btnBack.TabIndex = 13;
+            this.btnBack.TabStop = false;
             this.btnBack.Text = "Retourner aux recettes";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -116,10 +118,26 @@
             this.txtIngredients.TabStop = false;
             this.txtIngredients.TextChanged += new System.EventHandler(this.txtIngredients_TextChanged);
             // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.CadetBlue;
+            this.exitBtn.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.Location = new System.Drawing.Point(1789, 1017);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(113, 54);
+            this.exitBtn.TabIndex = 15;
+            this.exitBtn.TabStop = false;
+            this.exitBtn.Text = "Quitter";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.UseWaitCursor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
             // frmCookMode
             // 
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(1914, 1041);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.txtIngredients);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnLeft);
@@ -144,5 +162,6 @@
         private System.Windows.Forms.Button btnRignt;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtIngredients;
+        private System.Windows.Forms.Button exitBtn;
     }
 }

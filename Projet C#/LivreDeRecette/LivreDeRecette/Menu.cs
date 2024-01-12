@@ -15,19 +15,23 @@ namespace LivreDeRecette
         public frmMenu()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void Interface_Load(object sender, EventArgs e)
         {
-
+            Application.UseWaitCursor = false;
+            Cursor = Cursors.Default;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void exitBtn_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
         {
             frmQuestions questions = new frmQuestions();
             questions.ShowDialog();
@@ -35,19 +39,9 @@ namespace LivreDeRecette
             this.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnNext_MouseHover(object sender, EventArgs e)
         {
-
-        }
-
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
+            Cursor = Cursors.Default;
         }
     }
 }

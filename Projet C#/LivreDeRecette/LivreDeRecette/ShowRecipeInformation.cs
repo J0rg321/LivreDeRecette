@@ -25,24 +25,30 @@ namespace LivreDeRecette
         public frmShowRecipeInformation()
         {
             InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-            frmShowRecipeInformation frmShowRecipeInformation;
         }
 
         private void frmShowRecipeInformation_Load(object sender, EventArgs e)
         {
-            /*
-            lstPerson.Items[0] = 1;
+            Recipe recipeInformations = Recipe.GetOne(recipeId);
+
+            lblRecipeName.Text = recipeInformations.recipeName;
+
             for (int j = 2; j <= 100; j++)
             {
                 lstPerson.Items.Add(j);
             }
-            */
 
             txtIngredients.Text = string.Empty;
             this.ActiveControl = null;
 
-            int personCount = lstPerson.SelectedIndex;
+            int personCount = lstPerson.SelectedIndex + 1;
+
+            if(personCount == 0 || personCount == null)
+            {
+                personCount = 1;
+            }
 
             List<Quantities> recipeQuantities = Quantities.GetAll(recipeId);
             List<Steps> recipeSteps = Steps.GetAll(recipeId);
@@ -118,6 +124,21 @@ namespace LivreDeRecette
         private void txtSteps_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblNombrePers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRecipeName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

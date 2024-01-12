@@ -9,7 +9,7 @@
 
 -- Création de la base de donnéecooking "cooking" 
 
-DELETE DATABASE IF EXISTS cooking;
+DROP DATABASE IF EXISTS cooking;
 
 CREATE DATABASE IF NOT EXISTS cooking;
 
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS recipes
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	recipeName VARCHAR(150) NOT NULL,
 	vegetarian BOOLEAN NOT NULL,
-	preparationTime VARCHAR(100),
+	preparationTime INT NOT NULL,
 	recipeType VARCHAR(100),
 	lvl VARCHAR(100)
 );

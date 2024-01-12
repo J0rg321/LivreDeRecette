@@ -63,7 +63,7 @@
             this.exitBtn.BackColor = System.Drawing.Color.CadetBlue;
             this.exitBtn.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.Location = new System.Drawing.Point(1755, 950);
+            this.exitBtn.Location = new System.Drawing.Point(1789, 1011);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(113, 54);
             this.exitBtn.TabIndex = 6;
@@ -193,6 +193,7 @@
             this.button1.Text = "Ajouter la recette";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.UseWaitCursor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // picLemonLeft
             // 
@@ -221,7 +222,7 @@
             this.btnBack.BackColor = System.Drawing.Color.CadetBlue;
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(12, 975);
+            this.btnBack.Location = new System.Drawing.Point(12, 1011);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(252, 54);
             this.btnBack.TabIndex = 19;

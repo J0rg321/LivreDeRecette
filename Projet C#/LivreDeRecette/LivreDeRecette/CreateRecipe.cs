@@ -15,7 +15,8 @@ namespace LivreDeRecette
         public frmCreateDesign()
         {
             InitializeComponent();
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void CreateRecipe_Load(object sender, EventArgs e)
@@ -64,6 +65,16 @@ namespace LivreDeRecette
         {
             this.Close();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ceci n'est pas encore disponible en version Bêta");
+            frmQuestions frmQuestions = new frmQuestions();
+            frmQuestions.ShowDialog();
+
+            this.Hide();
+            this.Close();
         }
     }
 }

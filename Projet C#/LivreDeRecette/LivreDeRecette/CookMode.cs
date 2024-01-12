@@ -19,6 +19,8 @@ namespace LivreDeRecette
         public frmCookMode()
         {
             InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void frmCookMode_Load(object sender, EventArgs e)
@@ -56,6 +58,8 @@ namespace LivreDeRecette
                     }
                 }
             }
+            this.TabStop = false;
+            TabControl tabControl = null;
         }
 
         private void btnLeft_Click(object sender, EventArgs e)
@@ -72,6 +76,7 @@ namespace LivreDeRecette
                 stepNumber--;
                 lblSteps.Text = steps[stepNumber].stepNumber + " - " + steps[stepNumber].stepName + "\r\n" + steps[stepNumber].content + "\r\n\r\n";
             }
+            TabControl tabControl = null;
         }
 
         private void frmShowRecipeInformation_KeyUp(object sender, KeyEventArgs e)
@@ -97,6 +102,11 @@ namespace LivreDeRecette
         private void txtIngredients_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
